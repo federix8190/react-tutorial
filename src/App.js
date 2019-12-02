@@ -6,8 +6,8 @@ import Page1 from './components/Page1';
 import Page2 from './components/Page2';
 import MyApp from './components/MyApp';
 import Grilla from './components/Grilla';
-import GrillaPersonas from './components/GrillaPersonas';
 import PageError from './components/PageError';
+import PersonasPage from './pages/PersonasPage';
 import './App.css';
 
 class App extends Component {
@@ -34,7 +34,7 @@ class App extends Component {
                             render={() => <Grilla id="customers" />} />
                         <Route exact
                             path="/personas"
-                            render={() => <GrillaPersonas id="customers" />} />
+                            render={() => <PersonasPage id="customers" />} />
 
                         <Route component={PageError} />
 
