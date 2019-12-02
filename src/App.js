@@ -4,6 +4,9 @@ import NavBar from './NavBar/NavBar';
 import Home from './components/Home';
 import Page1 from './components/Page1';
 import Page2 from './components/Page2';
+import MyApp from './components/MyApp';
+import Grilla from './components/Grilla';
+import GrillaPersonas from './components/GrillaPersonas';
 import PageError from './components/PageError';
 import './App.css';
 
@@ -14,7 +17,9 @@ class App extends Component {
                 <div>
                     <NavBar />
                     <Redirect from="/" to="/home" />
+                    
                     <Switch>
+
                         <Route
                             path="/home"
                             component={Home} />
@@ -24,7 +29,15 @@ class App extends Component {
                         <Route exact
                             path="/page2"
                             render={() => <Page2 />} />
+                        <Route exact
+                            path="/page3"
+                            render={() => <Grilla id="customers" />} />
+                        <Route exact
+                            path="/personas"
+                            render={() => <GrillaPersonas id="customers" />} />
+
                         <Route component={PageError} />
+
                     </Switch>
                 </div>
             </BrowserRouter>

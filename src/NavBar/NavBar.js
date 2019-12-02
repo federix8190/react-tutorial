@@ -4,18 +4,24 @@ import './NavBar.css';
 
 class NavBar extends Component {
 
-  render() {
-    return (
-      <div className="NavBar">
-        <div className="link-container">
-          <Link to="/page1" className="link">Página 1</Link>
-        </div>
-        <div className="link-container">
-          <Link to="/page2" className="link">Página 2</Link>
-        </div>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="NavBar">
+                <div className="link-container">
+                    <Link to="/page1" className="link">Página 1</Link>
+                </div>
+                <div className="link-container">
+                    <Link to="/page2" className="link">Página 2</Link>
+                </div>
+                <div className="link-container">
+                    <Link to="/page3" className="link">Página 3</Link>
+                </div>
+                <div className="link-container">
+                    <Link to="/personas" className="link">Personas</Link>
+                </div>
+            </div>
+        );
+    }
 
 }
 

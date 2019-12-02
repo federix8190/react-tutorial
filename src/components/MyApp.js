@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
 
 // Importamos nuestro componente
-import Hola from './components/Hola';
+import Hola from './Hola';
 
 class MyApp extends Component {
   render() {
