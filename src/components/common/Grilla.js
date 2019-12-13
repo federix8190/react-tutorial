@@ -8,6 +8,7 @@ class GrillaPersonas extends Component {
         super(props);
         this.apiUrl = props.apiUrl;
         this.columnas = props.cols;
+        //this.columnas = [{'name':'nombre'}, {'name':'apellido'}, {'name':'cedula'}];
         this.state = {rows: []};
     }
 
@@ -30,7 +31,7 @@ class GrillaPersonas extends Component {
 
         var cols = [];
         for (var i = 0; i < this.columnas.length; i++) {
-            cols.push(<ObjectCol name={this.columnas[i]} />);
+            cols.push(<ObjectCol name={this.columnas[i].name} />);
         }
 
         return (

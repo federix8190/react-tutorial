@@ -10,8 +10,17 @@ class PersonasPage extends Component {
 
     render() {
 
-        var columnas = ['nombre', 'apellido', 'cedula', 'direccion'];
-        var ciudadesCols = ['id', 'nombre'];
+        //var columnas = ['nombre', 'apellido', 'cedula', 'direccion'];
+        var columnas = [
+            {'name':'nombre', 'width':'25%'},
+            {'name':'apellido', 'width':'25%'},
+            {'name':'cedula', 'width':'15%'},
+            {'name':'direccion', 'width':'35%'}
+        ];
+        var ciudadesCols = [
+            {'name':'id', 'width':'25%'},
+            {'name':'nombre', 'width':'75%'},
+        ];
 
         /*ReactDOM.render(
             <Grilla id="customers" apiUrl="/api/personas" cols={columnas} />,
