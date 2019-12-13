@@ -34,7 +34,7 @@ class GrillaPersonas extends Component {
         }
 
         return (
-            <table id={this.props.id}>
+            <table id={this.props.id} class={this.props.class}>
                 <thead><tr>{cols}</tr></thead>
                 <tbody>{this.state.rows}</tbody>
             </table>

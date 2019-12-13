@@ -11,6 +11,7 @@ class PersonasPage extends Component {
     render() {
 
         var columnas = ['nombre', 'apellido', 'cedula', 'direccion'];
+        var ciudadesCols = ['id', 'nombre'];
 
         /*ReactDOM.render(
             <Grilla id="customers" apiUrl="/api/personas" cols={columnas} />,
@@ -18,7 +19,10 @@ class PersonasPage extends Component {
           );*/
 
         return (
-            <Grilla id="customers" apiUrl="/api/personas" cols={columnas} />
+            <fragment>
+            <Grilla id="customers" class="grilla" apiUrl="/api/personas" cols={columnas} />
+            <Grilla id="ciudades" class="grilla" apiUrl="/api/ciudades" cols={ciudadesCols} />
+            </fragment>
         );
     }
 }

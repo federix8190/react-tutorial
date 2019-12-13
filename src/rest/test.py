@@ -51,13 +51,13 @@ def getPersonas():
 	user = request.args.get('user')
 	#return user
 	atributos = ['id', 'nombre', 'apellido', 'cedula', 'direccion']
-	return listar('persona', atributos, 50)
+	return listar('persona', atributos, 20)
 
 
 @app.route(URL_BASE + "/ciudades")
 def getCiudades():
 	atributos = ['id', 'nombre']
-	return listar('ciudad', atributos, 90)
+	return listar('ciudad', atributos, 20)
 
 def listar(tabla, atributos, registros):
 	try:
