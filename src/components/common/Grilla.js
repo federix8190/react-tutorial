@@ -31,7 +31,7 @@ class GrillaPersonas extends Component {
 
         var cols = [];
         for (var i = 0; i < this.columnas.length; i++) {
-            cols.push(<ObjectCol name={this.columnas[i].name} />);
+            cols.push(<ObjectCol name={this.columnas[i].title} />);
         }
 
         return (

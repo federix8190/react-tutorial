@@ -12,14 +12,14 @@ class PersonasPage extends Component {
 
         //var columnas = ['nombre', 'apellido', 'cedula', 'direccion'];
         var columnas = [
-            {'name':'nombre', 'width':'25%'},
-            {'name':'apellido', 'width':'25%'},
-            {'name':'cedula', 'width':'15%'},
-            {'name':'direccion', 'width':'35%'}
+            {'name':'nombre', 'title':'Nombres', 'width':'25%'},
+            {'name':'apellido', 'title':'Apellidos', 'width':'25%'},
+            {'name':'cedula', 'title':'Cedula', 'width':'15%'},
+            {'name':'direccion', 'title':'Direccion', 'width':'35%'}
         ];
         var ciudadesCols = [
-            {'name':'id', 'width':'25%'},
-            {'name':'nombre', 'width':'75%'},
+            {'name':'id', 'title':'Codigo', 'width':'25%'},
+            {'name':'nombre', 'title':'Ciudad','width':'75%'},
         ];
 
         /*ReactDOM.render(

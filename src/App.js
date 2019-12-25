@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import NavBar from './NavBar/NavBar';
+import SideBar from './NavBar/SideBar';
 import Home from './components/Home';
 import Page1 from './components/Page1';
 import Page2 from './components/Page2';
@@ -14,8 +15,8 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div>
-                    <NavBar />
+                <div className="main">
+                    <SideBar />
                     <Redirect from="/" to="/home" />
                     
                     <Switch>
