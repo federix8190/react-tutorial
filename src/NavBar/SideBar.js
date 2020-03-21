@@ -28,7 +28,7 @@ function SideBar() {
             <div>
                 <div id="mySidenav" className="sidenav">
                     <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
-                    <a href="#/page1"><i className="fa fa-fw fa-home"></i>About</a>
+                    <a href="/personas"><i className="fa fa-fw fa-home"></i>Personas</a>
                     <a href="#/page1"><i className="fa fa-fw fa-wrench"></i> Services</a>
                     <a href="#/page1"><i className="fa fa-fw fa-user"></i> Clients</a>
                     <a href="#/page1"><i className="fa fa-fw fa-envelope"></i> Contact</a>

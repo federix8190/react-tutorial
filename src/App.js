@@ -12,10 +12,12 @@ import PersonasPage from './pages/PersonasPage';
 import './App.css';
 
 class App extends Component {
+    
     render() {
         return (
             <BrowserRouter>
                 <div className="main">
+                    <NavBar />
                     <SideBar />
                     <Redirect from="/" to="/home" />
                     

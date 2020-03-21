@@ -29,8 +29,8 @@ class PersonasPage extends Component {
 
         return (
             <fragment>
-            <Grilla id="customers" class="grilla" apiUrl="/api/personas" cols={columnas} />
-            <Grilla id="ciudades" class="grilla" apiUrl="/api/ciudades" cols={ciudadesCols} />
+                <Grilla id="customers" class="grilla" apiUrl="/api/personas" cols={columnas} />
+                <Grilla id="ciudades" class="grilla" apiUrl="/api/ciudades" cols={ciudadesCols} />
             </fragment>
         );
     }

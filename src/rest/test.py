@@ -40,38 +40,36 @@ def testdb():
 			connection.close()
 			print("PostgreSQL connection is closed")
 
-
-class Persona:
-	def __init__(self, nombre, apellido):
-		self.nombre = nombre
-		self.apellido = apellido
-
 @app.route(URL_BASE + "/personas")
 def getPersonas():
-	user = request.args.get('user')
-	#return user
+	nombre = request.args.get('nombre')
 	atributos = ['id', 'nombre', 'apellido', 'cedula', 'direccion']
-	return listar('persona', atributos, 20)
+	return listar('persona', atributos, 20, nombre)
 
 
 @app.route(URL_BASE + "/ciudades")
 def getCiudades():
 	atributos = ['id', 'nombre']
-	return listar('ciudad', atributos, 20)
+	return listar('ciudad', atributos, 20, None)
 
-def listar(tabla, atributos, registros):
+def listar(tabla, atributos, registros, filtros):
 	try:
 		
 		# Construir Sentencia SQL
-		sql = 'SELECT '
+		sql = "SELECT "
 		cantidad = len(atributos) - 1
 		for atr in atributos[0 : cantidad]:
 			sql = sql + atr + ', '
-		sql = sql + atributos[cantidad] + ' FROM ' + tabla
+		sql = sql + atributos[cantidad] + " FROM " + tabla
+		
+		if filtros != None:
+			sql = sql + " WHERE nombre like '%" + filtros + "%'" 
+
 		if (registros > 0):
 			sql = sql +  ' limit ' + str(registros)
 		
 		# Ejecutar sentencia
+		print(sql)
 		connection = psycopg2.connect(user = USER, password = PASS, host = HOST, port = PORT, database = BBDD)
 		cursor = connection.cursor()
 		cursor.execute(sql)
