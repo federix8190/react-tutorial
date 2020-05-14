@@ -4,7 +4,6 @@ class ObjectRow extends Component {
 
 	render() {
         var datos = [];
-
         var columnas = this.props.columnas;
         for (var i = 0; i < columnas.length; i++) {
             var col = columnas[i].name;

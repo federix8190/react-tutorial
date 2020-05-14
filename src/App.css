@@ -53,3 +53,12 @@ a.azul {
   background-color: #4CAF50;
   color: white;
 }
+.box-body {
+    border-top: 1px solid #FEFEFE;
+    margin-top: 0px;
+    padding: 30px 0px 0px 40px;
+    min-height: 30px;
+}
+.input.grid_11 {
+  width: 418px;
+}

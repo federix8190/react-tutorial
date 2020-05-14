@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Grilla from '../components/common/Grilla';
+import Formulario from '../components/common/Formulario';
 
-class PersonasPage extends Component {
+class PersonaFormPage extends Component {
 
     constructor(props) {
         super(props);
@@ -22,11 +22,10 @@ class PersonasPage extends Component {
 
         return (
             <fragment>
-                <Grilla id="customers" class="grilla" apiUrl="/api/personas" cols={columnas} />
-                <Grilla id="ciudades" class="grilla" apiUrl="/api/ciudades" cols={ciudadesCols} />
+                <Formulario class="grilla" apiUrl="/api/personas" cols={columnas} />
             </fragment>
         );
     }
 }
 
-export default PersonasPage;
+export default PersonaFormPage;

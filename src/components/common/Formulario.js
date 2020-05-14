@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ObjectRow from './ObjectRow';
-import ObjectCol from './ObjectCol';
+import FieldSet from './FieldSet';
 
-class GrillaPersonas extends Component {
+class Formulario extends Component {
 
     constructor(props) {
         super(props);
@@ -30,15 +30,16 @@ class GrillaPersonas extends Component {
 
         var cols = [];
         for (var i = 0; i < this.columnas.length; i++) {
-            cols.push(<ObjectCol name={this.columnas[i].title} />);
+            cols.push(<FieldSet />);
         }
         return (
-            <table id={this.props.id} class={this.props.class}>
-                <thead><tr>{cols}</tr></thead>
-                <tbody>{this.state.rows}</tbody>
-            </table>
+            <div class="box-body">
+            <form class="grid_11">
+                 <fieldset>{cols}</fieldset>
+            </form>
+            </div>
         );
     }
 }
 
-export default GrillaPersonas;
+export default Formulario;
